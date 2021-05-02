@@ -1,4 +1,5 @@
 import React from "react";
+import { withAuthenticator, AmplifyTheme } from 'aws-amplify-react';
 import "./App.css";
 
 class App extends React.Component {
@@ -9,4 +10,21 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const theme = {
+  ...AmplifyTheme,
+  button: {
+    ...AmplifyTheme.button,
+    backgroundColor: "var(--squidInk)",
+    color: "white"
+  },
+  sectionBody: {
+    ...AmplifyTheme.sectionBody,
+    padding: "5px"
+  },
+  sectionHeader: {
+    ...AmplifyTheme.sectionHeader,
+    backgroundColor: "var(--squidInk)"
+  }
+}
+
+export default withAuthenticator(App, true, [], null, theme);
