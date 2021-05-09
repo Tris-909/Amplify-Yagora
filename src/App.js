@@ -3,7 +3,7 @@ import { Auth, Hub } from 'aws-amplify';
 import { Authenticator, AmplifyTheme } from 'aws-amplify-react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import HomePage from './pages/HomePage';
+import HomePage from './pages/HomePage.jsx';
 import MarketPage from './pages/MarketPage';
 import ProfilePage from './pages/ProfilePage';  
 import Navbar from './components/Navbar';
